@@ -1,0 +1,11 @@
+---
+- hosts: 43.207.59.100
+  become: yes
+  tasks:
+   - name: Install git
+     yum:
+       name: git
+       state: present
+       lock_timeout: 180
+  roles:
+    - nginx
